@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>ils_pathfinding</name>
+  <version>0.1.0</version>
+  <description>ILS pathfinding with MAVROS</description>
+  <maintainer email="you@example.com">you</maintainer>
+  <license>MIT</license>
+  <buildtool_depend>catkin</buildtool_depend>
+  <depend>rospy</depend>
+  <depend>std_msgs</depend>
+  <depend>geometry_msgs</depend>
+  <depend>nav_msgs</depend>
+  <depend>mavros</depend>
+  <depend>mavros_msgs</depend>
+  <export/>
+</package>

@@ -1,0 +1,18 @@
+<launch>
+  <node pkg="ils_pathfinding" type="drone_control.py" name="ils_controller" output="screen">
+    <param name="map_path" value="$(arg map_path)"/>
+    <param name="resolution" value="$(arg resolution)"/>
+    <param name="goal_x" value="$(arg goal_x)"/>
+    <param name="goal_y" value="$(arg goal_y)"/>
+    <param name="w0" value="$(arg w0)"/>
+    <param name="wstep" value="$(arg wstep)"/>
+    <param name="wmax" value="$(arg wmax)"/>
+  </node>
+  <arg name="map_path" default="$(env HOME)/ILS-ArduPilot/maps/sample_map.png"/>
+  <arg name="resolution" default="1.0"/>
+  <arg name="goal_x" default="80"/>
+  <arg name="goal_y" default="80"/>
+  <arg name="w0" default="0.03"/>
+  <arg name="wstep" default="0.02"/>
+  <arg name="wmax" default="0.3"/>
+</launch>
