@@ -1,0 +1,7 @@
+numpy>=1.22
+pillow>=9.0
+matplotlib>=3.6
+pandas>=1.5
+# Optional for flight control (plan_and_fly.py)
+dronekit>=2.9.2
+pymavlink>=2.4.0
