@@ -10,3 +10,4 @@ ros1_ws/.catkin_tools/
 # Local outputs
 analysis_plots/
 pathfinding_results.csv
+.DS_Store
