@@ -1,0 +1,31 @@
+# Basic Mission Scenario
+# Simple short-range mission for testing
+
+name: "Basic Mission"
+description: "Short-range mission for basic testing"
+
+flight:
+  altitude: 5.0
+  airspeed: 1.5
+  waypoint_radius: 1.5
+  waypoint_pause: 1.0
+
+map:
+  default_map: "grid_maps/example_map.png"
+  meters_per_cell: 0.5
+  north_is_row_neg: true
+
+mission:
+  start: [5, 5]
+  goal: [30, 30]
+
+ils:
+  enabled: true
+  base_width: 0.1
+  width_step: 0.05
+  max_width: 0.5
+  max_expansions: 3
+
+safety:
+  max_distance_from_home: 100
+  rtl_on_complete: true

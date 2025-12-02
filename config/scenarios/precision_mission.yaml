@@ -1,0 +1,32 @@
+# Precision Mission Scenario
+# Low altitude, slow speed for precise navigation
+
+name: "Precision Mission"
+description: "Low and slow mission for precise obstacle avoidance"
+
+flight:
+  altitude: 3.0
+  airspeed: 1.0
+  waypoint_radius: 0.5
+  waypoint_pause: 2.0
+
+map:
+  default_map: "grid_maps/example_map.png"
+  meters_per_cell: 0.25
+  north_is_row_neg: true
+
+mission:
+  start: [10, 10]
+  goal: [50, 50]
+
+ils:
+  enabled: true
+  base_width: 0.05
+  width_step: 0.01
+  max_width: 0.15
+  max_expansions: 8
+
+safety:
+  max_distance_from_home: 50
+  rtl_on_complete: true
+  land_on_complete: false
