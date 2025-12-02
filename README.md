@@ -1,8 +1,8 @@
 # ILS-ArduPilot
 
-**Intelligent pathfinding for autonomous drones using ArduPilot**
+**Advanced autonomous drone navigation system combining intelligent pathfinding with ArduPilot integration**
 
-Grid-based pathfinding with multiple algorithms (A*, Dijkstra, BFS, DFS, Greedy Best-First) enhanced with ILS (Incremental Line Search) for efficient obstacle avoidance and path planning.
+ILS-ArduPilot enables drones to autonomously navigate complex environments using sophisticated pathfinding algorithms. The system features Incremental Line Search (ILS), an innovative corridor-based approach that optimizes traditional algorithms like A* for faster, more efficient path planning. Whether you're running simulations or flying real hardware, ILS-ArduPilot provides a complete solution for obstacle avoidance and autonomous navigation with support for DroneKit, ROS/MAVROS, and full SITL simulation capabilities.
 
 ## Features
 
