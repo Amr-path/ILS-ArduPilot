@@ -1,0 +1,97 @@
+# Mission Parameters Configuration
+# These parameters control the ILS pathfinding and flight behavior
+
+# === Flight Parameters ===
+flight:
+  # Takeoff altitude in meters
+  altitude: 10.0
+
+  # Airspeed in m/s (for copter, this is ground speed)
+  airspeed: 2.0
+
+  # Waypoint acceptance radius in meters
+  waypoint_radius: 2.0
+
+  # Pause time at each waypoint in seconds
+  waypoint_pause: 2.0
+
+# === Map Parameters ===
+map:
+  # Default map file
+  default_map: "grid_maps/example_map.png"
+
+  # Map scale: meters per grid cell
+  meters_per_cell: 1.0
+
+  # Coordinate system
+  # true: image row 0 is north, rows increase southward (typical for images)
+  # false: image row 0 is south, rows increase northward
+  north_is_row_neg: true
+
+# === ILS Algorithm Parameters ===
+ils:
+  # Enable ILS corridor search
+  enabled: true
+
+  # Initial corridor width as percentage of map size (0.0 to 1.0)
+  base_width: 0.05
+
+  # Corridor width increment for each expansion
+  width_step: 0.02
+
+  # Maximum corridor width
+  max_width: 0.3
+
+  # Maximum number of corridor expansions before falling back to full A*
+  max_expansions: 5
+
+# === Connection Parameters ===
+connection:
+  # ArduPilot connection string
+  # SITL: udp:127.0.0.1:14550
+  # Serial: /dev/ttyUSB0 or /dev/ttyACM0
+  # TCP: tcp:127.0.0.1:5760
+  string: "udp:127.0.0.1:14550"
+
+  # Connection timeout in seconds
+  timeout: 30
+
+  # Wait for vehicle to be ready
+  wait_ready: true
+
+# === Safety Parameters ===
+safety:
+  # Enable pre-flight checks
+  preflight_checks: true
+
+  # Minimum battery voltage before flight
+  min_battery_voltage: 10.5
+
+  # Maximum distance from home in meters (0 = no limit)
+  max_distance_from_home: 1000
+
+  # Return to launch on mission complete
+  rtl_on_complete: true
+
+  # Land instead of RTL
+  land_on_complete: false
+
+# === ROS-specific Parameters ===
+ros:
+  # Resolution for ROS coordinate conversion (meters per cell)
+  resolution: 1.0
+
+  # Default goal coordinates (grid cells)
+  goal_x: 80
+  goal_y: 80
+
+  # ILS parameters for ROS
+  w0: 0.03
+  wstep: 0.02
+  wmax: 0.3
+
+  # Control loop rate (Hz)
+  control_rate: 20
+
+  # Position tolerance for waypoint acceptance (meters)
+  position_tolerance: 0.5
